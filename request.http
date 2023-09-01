@@ -1,0 +1,140 @@
+http://localhost:3005/api/personas
+
+###
+
+http://localhost:3005/api/personas/1
+
+###
+
+POST http://localhost:3005/api/personas HTTP/1.1
+Content-Type: application/json
+
+{
+    "nombre": "Gian",
+    "telefono": 343545,
+    "edad": 22,
+    "sexo": "Maculino",
+    "vivienda_id": 1
+}
+
+###
+PUT http://localhost:3005/api/personas/1 HTTP/1.1
+Content-Type: application/json
+
+{
+    "nombre": "Diana",
+    "telefono": 53434,
+    "edad": 26,
+    "sexo": "Femenino"
+}
+
+###
+DELETE http://localhost:3005/personas/1 HTTP/1.1
+Content-Type: application/json
+
+###
+
+
+http://localhost:3005/api/departamentos
+
+###
+
+http://localhost:3005//apidepartamentos/1
+
+###
+
+POST http://localhost:3005/api/departamentos HTTP/1.1
+Content-Type: application/json
+
+{
+    "nombre": "Cundinamarca",
+    "ubicacion": "(45.123, -73.456)",
+    "presupuesto": 123,
+    "poblacion": 1434
+}
+
+###
+PUT http://localhost:3005/api/departamentos/1 HTTP/1.1
+Content-Type: application/json
+
+{
+    "nombre": "Antioquia",
+    "ubicacion": "(35.123, -62.456)",
+    "presupuesto": 434,
+    "poblacion": 7482
+}
+
+###
+DELETE http://localhost:3005/api/departamentos/1 HTTP/1.1
+Content-Type: application/json
+
+
+###
+
+
+http://localhost:3005/api/municipios
+
+###
+
+http://localhost:3005/api/municipios/1
+
+###
+
+POST http://localhost:3005/api/municipios HTTP/1.1
+Content-Type: application/json
+
+{
+    "nombre": "Neiva",
+    "area": 124,
+    "presupuesto": 123
+}
+
+###
+PUT http://localhost:3005/api/municipios/1 HTTP/1.1
+Content-Type: application/json
+
+{
+    "nombre": "Quindio",
+    "area": 852,
+    "presupuesto": 8384
+}
+
+###
+DELETE http://localhost:3005/api/municipios/1 HTTP/1.1
+Content-Type: application/json
+
+
+###
+
+
+http://localhost:3005/api/viviendas
+
+###
+
+http://localhost:3005/api/viviendas/1
+
+###
+
+POST http://localhost:3005/api/viviendas HTTP/1.1
+Content-Type: application/json
+
+{
+    "direccion": "cll 151 # 100a",
+    "capacidad": 5,
+    "niveles": 2,
+    "propietario_id": 2
+}
+
+###
+PUT http://localhost:3005/api/viviendas/1 HTTP/1.1
+Content-Type: application/json
+
+{
+    "direccion": "cll 81 # 30bis",
+    "capacidad": 10,
+    "niveles": 5
+}
+
+###
+DELETE http://localhost:3005/api/viviendas/1 HTTP/1.1
+Content-Type: application/json
