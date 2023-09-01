@@ -19,19 +19,19 @@ class DepartamentoRepo {
         return toCamelCase(rows)[0];
     }
 
-    static async insert(nombre, ubicacion, presupuesto, poblacion) {
+    static async insert(nombre, area, presupuesto, poblacion) {
         const { rows } = await pool.query(`
-            INSERT INTO departamentos (nombre, ubicacion, presupuesto, poblacion) VALUES ($1, $2, $3, $4) RETURNING *;
-        `, [nombre, ubicacion, presupuesto, poblacion]
+            INSERT INTO departamentos (nombre, area, presupuesto, poblacion) VALUES ($1, $2, $3, $4) RETURNING *;
+        `, [nombre, area, presupuesto, poblacion]
         );
 
         return toCamelCase(rows)[0];
-    }
+    }    
 
-    static async update(id, nombre, ubicacion, presupuesto, poblacion) {
+    static async update(id, nombre, area, presupuesto, poblacion) {
         const { rows } = await pool.query(`
-            UPDATE departamentos SET nombre = $1, ubicacion = $2, presupuesto = $3, poblacion = $4 WHERE id_dpto = $5 RETURNING *;
-        `, [nombre, ubicacion, presupuesto, poblacion, id]
+            UPDATE departamentos SET nombre = $1, area = $2, presupuesto = $3, poblacion = $4 WHERE id_dpto = $5 RETURNING *;
+        `, [nombre, area, presupuesto, poblacion, id]
         );
 
         return toCamelCase(rows)[0];

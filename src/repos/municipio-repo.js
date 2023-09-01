@@ -19,10 +19,10 @@ class MunicipioRepo {
         return toCamelCase(rows)[0];
     }
 
-    static async insert(nombre, area, presupuesto, departamento_id, gobernador_id) {
+    static async insert(nombre, area, presupuesto, departamento_id) {
         const { rows } = await pool.query(`
-            INSERT INTO municipios (nombre, area, presupuesto, departamento_id, gobernador_id) VALUES ($1, $2, $3, $4, $5) RETURNING *;
-        `, [nombre, area, presupuesto, departamento_id, gobernador_id]
+            INSERT INTO municipios (nombre, area, presupuesto, departamento_id) VALUES ($1, $2, $3, $4) RETURNING *;
+        `, [nombre, area, presupuesto, departamento_id]
         );
 
         return toCamelCase(rows)[0];

@@ -4,9 +4,11 @@ const viviendaRouter = require('./routes/viviendas');
 const municipioRouter = require('./routes/municipios');
 const departamentoRouter = require('./routes/departamentos');
 
+var cors = require('cors')
 module.exports = () => {
-    const app = express();
 
+    const app = express();
+    app.use(cors());
     app.use(express.json());
     app.use(personaRouter);
     app.use(viviendaRouter);

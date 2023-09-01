@@ -24,9 +24,9 @@ router.get('/api/departamentos/:id', async (req, res) => {
 });
 
 router.post('/api/departamentos', async (req, res) => {
-    const { nombre, ubicacion, presupuesto, poblacion } = req.body;
+    const { nombre, area, presupuesto, poblacion } = req.body;
 
-    const user = await DepartamentoRepo.insert(nombre, ubicacion, presupuesto, poblacion);
+    const user = await DepartamentoRepo.insert(nombre, area, presupuesto, poblacion);
 
 
     res.send(user);
@@ -34,9 +34,9 @@ router.post('/api/departamentos', async (req, res) => {
 
 router.put('/api/departamentos/:id', async (req, res) => {
     const { id } = req.params;
-    const { nombre, ubicacion, presupuesto, poblacion } = req.body;
+    const { nombre, area, presupuesto, poblacion } = req.body;
 
-    const user = await DepartamentoRepo.update(id, nombre, ubicacion, presupuesto, poblacion);
+    const user = await DepartamentoRepo.update(id, nombre, area, presupuesto, poblacion);
 
     if (user) {
         res.send(user);

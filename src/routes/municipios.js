@@ -24,8 +24,8 @@ router.get('/api/municipios/:id', async (req, res) => {
 });
 
 router.post('/api/municipios', async (req, res) => {
-    const { nombre, area, presupuesto, departamento_id, gobernador_id } = req.body;
-    const user = await MunicipioRepo.insert(nombre, area, presupuesto, departamento_id, gobernador_id);
+    const { nombre, area, presupuesto, departamento_id } = req.body;
+    const user = await MunicipioRepo.insert(nombre, area, presupuesto, departamento_id);
 
     res.send(user);
 });
