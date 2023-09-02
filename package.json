@@ -8,8 +8,7 @@
   "scripts": {
     "migrate": "node-pg-migrate",
     "dev": "nodemon index.js",
-    "start": "node index.js",
-    "build": "webpack"
+    "start": "node index.js"
   },
   "keywords": [],
   "author": "",
