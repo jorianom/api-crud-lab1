@@ -9,7 +9,8 @@
   "main": "index.js",
   "scripts": {
     "migrate": "node-pg-migrate",
-    "start": "nodemon index.js"
+    "dev": "nodemon index.js",
+    "start": "node index.js"
   },
   "keywords": [],
   "author": "",
