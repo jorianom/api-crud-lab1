@@ -1,7 +1,7 @@
 {
   "name": "lab1",
   "version": "1.0.0",  
-  "engine": { "node": "14.x", "npm": "6.x" },
+  "engine": { "node": "16.x", "npm": "10.x" },
   "description": "",
   "main": "index.js",
   "scripts": {
